@@ -1,6 +1,5 @@
 <?php
 
-
 /*
  *
  *  ____            _        _   __  __ _                  __  __ ____
@@ -26,7 +25,6 @@ namespace pocketmine\block\inventory;
 
 use pocketmine\inventory\SimpleInventory;
 use pocketmine\world\Position;
-
 
 class CampfireInventory extends SimpleInventory implements BlockInventory{
 	use BlockInventoryTrait;
