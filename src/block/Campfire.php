@@ -58,7 +58,6 @@ class Campfire extends Transparent{
 	/** @var int[] */
 	protected array $itemTime = [];
 
-
 	public function writeStateToMeta() : int{
 		return BlockDataSerializer::writeLegacyHorizontalFacing($this->facing) | ($this->extinguished ? BlockLegacyMetadata::CAMPFIRE_FLAG_EXTINGUISHED : 0);
 	}
@@ -256,7 +255,7 @@ class Campfire extends Transparent{
 				}
 			}
 			$this->position->getWorld()->setBlock($this->position, $this);
-			if(!empty($this->items)){
+			if($this->items !== null){
 				$this->position->getWorld()->scheduleDelayedBlockUpdate($this->position, 1);
 			}
 		}
